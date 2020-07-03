@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HMTL 4.01//EN">
+<html lang="en">
+<head>
+
+ <title>{% block title %}   {% endblock %} </title>
+ <link rel="stylesheet" href="bootstrap/css/bootsrap.min.css" />
+ <link rel="stylesheet" href="bootstrap/css/bootsrap-grid.min.css" />
+</head>
+<body>
+ <div class="page-header">
+   <a href=" {% url 'post_new' %}" class="top-menu" ><span class="glyphicon-plus">
+   
+   </span><button class="btn default">ADD POST</button></a>
+   <h1><a href="/blog">Blog posts</a></h1>
+    
+ </div>
+ <div class =" content container">
+  <div class="row">
+   <div class="col-md-8">
+		{% block content %}  
+
+		{% endblock %}
+    </div>
+    </div>
+   </div>	
+{% block footer %}
+    <hr>
+    <p>Quick links go here </p>
+{% endblock %}
+
+</body>
+</html>
